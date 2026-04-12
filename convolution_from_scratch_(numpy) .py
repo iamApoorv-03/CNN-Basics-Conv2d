@@ -370,7 +370,7 @@ Gradient pattern shows averaging working correctly
 ✅ Zero values outside lesion (Row 5) shown as Black
 ✅ Symmetric pattern on left and right edges
 ✅ Blur shows smooth gradient from center to edges
-
+✅ Perfect alignment with original lesion location
 
 ## Summary
 Convolution worked perfectly. Edge detection found all boundaries. Strongest response (White) where lesion widest. No false edges detected inside or outside. Blur successfully averaged pixel values creating smooth transitions.

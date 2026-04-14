@@ -3,7 +3,7 @@
 ## Introduction to Convolution
 Convolution is a mathematical operation used in various domains, including image processing, to combine two functions to form a third function. In the context of Convolutional Neural Networks (CNNs), it is primarily used for feature extraction from images.
 
-### What is a Kernel?
+### What is a 
 A kernel (or filter) is a small matrix used to apply effects like blurring, sharpening, edge detection, etc. Kernels slide over the input image to produce a feature map.
 
 ### Edge Detection

@@ -39,11 +39,6 @@ edge_kernel= np.array([
     [-1,0,1],
 ],dtype = float)
 
-blur_kernel= np.array([
-    [1,1,1],
-    [1,1,1],
-    [1,1,1],
-],dtype = float) / 9 # dividing by 9 for normalisation
 
 # implementing convolution manually
 def manual_convolution (image, kernel ):

@@ -21,8 +21,9 @@ image = np.array([
     [1,1,5,5,5,1,1,1],
     [1,1,5,5,5,1,1,1],
     [1,1,1,1,1,1,1,1],
-    
-],dtype = float)
+    [1,1,1,1,1,1,1,1],
+    [1,1,1,1,1,1,1,1],
+    ],dtype = float)
 
 print("Original image")
 print(image)

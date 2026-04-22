@@ -237,7 +237,7 @@ test_loader= DataLoader(
 # └─ Easier for neural network to learn!
 
 # training setup
-criterion = nn.CrossEntropyLoss
+criterion = nn.CrossEntropyLoss()
 optimizer= optim.Adam(model.parameters(), lr = 0.01)
 scheduler= optim.lr_scheduler.StepLR(optimizer, step_size= 2, gamma= 0.1)  # Scheduler: StepLR (reduce lr by 10% every 2 epochs)"
 

@@ -90,7 +90,7 @@ class SimpleMedicalCNN(nn.Module): # our parent class is nn.Module ,SimpleMedica
     x= self.pool(x)# (N , 64, 7 , 7)
 
     # flatten
-    x = x.view(x.size[0],-1) #(N,3136)
+    x = x.view(x.size(0),-1) #(N,3136)
 
     # FC LAYERS
     x = self.relu(self.fc1(x))

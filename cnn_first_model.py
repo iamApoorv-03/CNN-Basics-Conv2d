@@ -77,7 +77,7 @@ class SimpleMedicalCNN(nn.Module): # our parent class is nn.Module ,SimpleMedica
     self.fc2= nn.Linear(128,10)   # 10 classes(0-9)
 
     # activation function
-    self.relu= nn.ReLU
+    self.relu= nn.ReLU()
     self.dropout = nn.Dropout(0.5)
 
   def forwrd(self, x):

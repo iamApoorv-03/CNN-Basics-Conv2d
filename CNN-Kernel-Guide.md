@@ -126,3 +126,53 @@ Together, they create 32 different **Feature Maps**—each one highlighting a di
 
 >  **Checkpoint:**
 > If you can look at a 3x3 grid of colors and say, "That looks like a top-to-bottom brightness change, so it's a horizontal edge detector," then you have mastered CNN Kernel Interpretation.
+
+---
+
+## PART 9: THE UNIVERSAL INTERPRETATION LOGIC
+
+The principles learned in MNIST apply to **all** Computer Vision models. Whether the AI is looking at a satellite image or a medical X-ray, the "Visual Grammar" remains the same.
+
+### 1. Identifying "Spot" and "Radial" Detectors
+Beyond edges, models look for points of interest using **Center-Surround** filters.
+*   **The Pattern:** A bright (positive) center surrounded by a dark (negative) ring, or vice-versa.
+*   **The Function:** These detect "blobs," dots, or the centers of shapes.
+*   **Visual Cue:** If you see a "donut" or "target" shape in the weights, it is a spot detector.
+
+### 2. The "Opponent Pair" Rule
+High-performing networks often learn "Opponents" to define object boundaries accurately.
+*   **The Logic:** If Kernel A detects a "Right Edge" (Light → Dark), you will almost always find a "Twin" (Kernel B) that detects the "Left Edge" (Dark → Light).
+*   **The Trick:** When interpreting a layer, look for the "photographic negative" of a kernel. If you find it, the network is likely using that pair to calculate the **thickness** of a specific stroke or shape.
+
+### 3. Understanding Feature Map "Activation"
+To confirm what a kernel does, you must look at its output (the Feature Map).
+*   **The Match Score:** A pixel in the feature map is bright only if the image region perfectly matches the kernel's weights.
+*   **The ReLU Filter:** Most modern CNNs turn negative results to **Zero**. 
+*   **Interpretation:** Bright white areas in a feature map indicate exactly **where** the kernel found its specific pattern.
+
+---
+
+## PART 10: THE SPATIAL HIERARCHY (Layer 1 vs. Deep Layers)
+
+Interpretation logic shifts as you move deeper into the "brain" of the AI:
+
+1.  **Layer 1 (The Alphabet):** Detects raw pixels. You see Edges, Colors, and Textures.
+2.  **Layer 2 (The Syllables):** Detects combinations. It takes two "Edge" outputs from Layer 1 and creates a "Corner" or "Curve."
+3.  **Layer 3+ (The Objects):** Detects complex parts. By this stage, visualizations no longer look like lines; they look like "Eyes," "Wheels," or "Honeycombs."
+
+---
+
+## PART 11: PRO INTERPRETATION CHECKLIST
+
+Use this 5-step checklist to decode **any** kernel in **any** model:
+
+1.  **Map Colors to Numbers:** Assign $+1$ (White), $0$ (Gray), and $-1$ (Black) to the weights.
+2.  **Directional Gradient:** Is the change Horizontal, Vertical, Diagonal, or Radial?
+3.  **Identify Feature Type:** Is it an Edge, Corner, Diagonal, or Spot?
+4.  **Search for the Twin:** Does this kernel have a "Negative Opponent" in the same layer?
+5.  **Determine the Level:** Is this Layer 1 (detecting raw pixels) or a deeper layer (combining existing features)?
+
+---
+
+## FINAL CONCLUSION
+You have moved from "Black Box" thinking to "Visual Logic." You now possess the ability to look at the mathematical weights of a Convolutional Neural Network and describe exactly what it is "hunting" for in an image. **You are now a CNN Kernel Expert.** 

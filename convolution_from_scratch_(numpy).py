@@ -10,7 +10,7 @@ Original file is located at
 # imports
 import numpy as np
 import matplotlib.pyplot as plt
-from scipy import signal
+
 
 # creating a simple medical like image
 

@@ -71,7 +71,7 @@ print(edge_output)
 
 # applying blur
 blur_output= manual_convolution(image, blur_kernel)
-print("Blur output:")
+
 print(blur_output)
 
 # visualisation
